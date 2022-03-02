@@ -1,18 +1,28 @@
-const sequelize = require('../config/connection');
-const seedComments = require('./commentData');
-const seedPosts = require('./postData');
-const seedUsers = require('./userData');
+const { Comment } = require('../models')
 
-const seedAll = async () => {
-  await sequelize.sync({ force: true });
-  
-  await seedUsers();
-  
-  await seedPosts();
+const commentdata = [
+    {
+        content: 'I completely agree with your take on this issue',
+        likes: 1,
+        dislikes: 1
+    },
+    {
+        content: 'thank you!',
+        likes: 2,
+        dislikes: 2
+    },
+    {
+        content: 'get the newest one.',
+        likes: 3,
+        dislikes: 3
+    },
+    {
+        content: 'great post!',
+        likes: 4,
+        dislikes: 4
+    }
+]
 
-  await seedComments();
+const seedComments = () => Comment.bulkCreate(commentdata);
 
-  process.exit(0);
-};
-
-seedAll();
+module.exports = seedComments;
