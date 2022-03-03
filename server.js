@@ -35,7 +35,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 //Setup routes to the Server
 //Look at /controllers folder
 
-app.use('./controllers', routes);
+app.use(routes);
 
 sequelize.sync({force:true}).then(()=>{
     app.listen(PORT, () => {
