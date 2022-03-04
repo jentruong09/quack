@@ -1,17 +1,19 @@
-<div class="edit-post">
+<div class="container">
     <h3> Edit Post </h3>
     <form class="form-edit-post" id="edit-post-form">
         <input type="hidden" name="post-id" value="{{post.id}}" />
         <div class="form-group">
-            <label class="form-label" for="post-body">Content</label>
-            <textarea name="post-body" class="form-input">{{post.body}}</textarea>
+            <textarea name="post-body" class="form-control" id="post-body" rows="3">{{post.post}}</textarea>
         </div>
         
-    <button type="submit" class="btn">Update</button>
-    <button type="button" id="delete-btn" class="btn">Delete</button>
+    <button type="submit" class="btn btn-primary">Update</button>
+    <button type="button" id="delete-btn" class="btn btn-primary">Delete</button>
+
+    <div class="comments">
+        {{>comments post.comments}}
+    </div>
     </form>
 </div>
 
-{{comments post.comments}}
 
 <script src="/js/edit-post.js"></script>

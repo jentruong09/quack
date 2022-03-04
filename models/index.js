@@ -5,7 +5,8 @@ const User = require('./User');
 
 // Comment belongTo Posts
 Comment.belongsTo(Post, {
-    foreignKey: 'post_id'
+    foreignKey: 'post_id',
+    onDelete: 'CASCADE'
 });
 
 // Comment belongTo Users
