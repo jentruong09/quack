@@ -11,32 +11,29 @@ Post.init(
             primaryKey: true,
             autoIncrement: true,
         },
-        content: {
+        title: {
             type: DataTypes.STRING,
             allowNull: false,
         },
-        likes: {
-            type: DataTypes.INTEGER,
+        post: {
+            type: DataTypes.STRING,
             allowNull: false,
-            defaultValue: 0
-        },
-        dislikes: {
-            type: DataTypes.INTEGER,
-            allowNull: false,
-            defaultValue: 0
+            validate: {
+                len: [5]
+            }
         },
         user_id: {
             type: DataTypes.INTEGER,
             references: {
-                model:'user',
+                model: 'user',
                 key: 'id'
             }
         }
     },
     {
         sequelize,
-        freezeTableName: true,
         timestamps: true,
+        freezeTableName: true,
         underscored: true,
         modelName: 'post',
     }

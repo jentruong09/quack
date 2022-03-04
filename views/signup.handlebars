@@ -1,25 +1,23 @@
-<div class="card">
-  <div class="card-header">
-    <h2>Sign Up</h2>
-  </div>
-  <div id="signup" role="tabpanel">
-    <form id="signup-form" class="card-body">
-      <div>
-        <label for="username-input-signup">Username</label>
-        <input type="text" id="username-input-signup" />
-      </div>
-      <div>
-        <label for="email-input-signup">Email</label>
-        <input type="text" id="email-input-signup" />
-      </div>
-      <div>
-        <label for="password-input-signup">Password</label>
-        <input type="password" id="password-input-signup" />
-      </div>
-      <button type="submit" id="signup-btn" class="btn" >Signup!</button>
-      <a href="/login">Login instead</a>
-    </form>
-  </div>
+<div class="container">
+<form class="signup-form">
+    <div class="form-group">
+        <label for="username-input">Username</label>
+        <input type="username" class="form-control" id="username-signup" aria-describedby="usernameHelp"/>
+    </div>
+    <div class="form-group">
+        <label for="exampleInputEmail1">Email address</label>
+        <input type="email" class="form-control" id="email-signup" aria-describedby="emailHelp"/>
+        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+    </div>
+    <div class="form-group">
+        <label for="exampleInputPassword1">Password</label>
+        <input type="password" class="form-control" id="password-signup"/>
+    </div>
+    <div class="login"> 
+        Already part of the QUACK family? <a href="/login"> Login </a>
+    </div>
+    <button type="submit" class="signup-btn btn btn-primary">Submit</button>
+</form>
 </div>
 
-<script src="/js/login.js"></script>
+<script src="/js/signup.js"></script>
