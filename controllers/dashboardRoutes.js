@@ -1,10 +1,13 @@
 const router = require('express').Router();
 const {Post, User, Comment} = require('../models')
+const withAuth = require('../utils/auth');
 
-
-router.get('/', (req, res) => {
+router.get('/', withAuth, (req, res) => {
     // find all posts
     Post.findAll({
+        where: {
+            user_id: req.session.user_id
+        },
         attributes: ['id', 'title', 'post', 'created_at'],
         include: [
             {
@@ -23,7 +26,8 @@ router.get('/', (req, res) => {
       
     }).then(dbPostData => {
         const posts = dbPostData.map((post) => post.get({ plain: true }));
-        res.render('homepage', {posts, loggedIn: req.session.loggedIn});
+        console.log(posts)
+        res.render('dashboard', {posts, loggedIn: req.session.loggedIn});
     })
     .catch(err => {
       console.log(err);
@@ -31,27 +35,25 @@ router.get('/', (req, res) => {
     })
 });
 
-router.get('/signup', (req, res) => {
-    res.render('signup')
-});
 
-router.get('/post/:id', (req,res) => {
+router.get('/edit/:id', (req,res) => {
     Post.findOne({
         where: {
             id: req.params.id
         },
         attributes: ['id', 'title', 'post', 'created_at'],
-        include: [{
+        include: [
+            {
+                model: User,
+                attributes: ['username']
+            },
+            {
             model: Comment,
             attributes: ['id', 'comment', 'post_id', 'user_id', 'created_at'],
             include: {
                 model: User,
                 attributes: ['username']
             }
-        },
-        {
-            model: User,
-            attributes: ['username']
         }
     ]
     }) .then (dbPostData => {
@@ -61,7 +63,7 @@ router.get('/post/:id', (req,res) => {
         }
         const post = dbPostData.get({plain: true});
 
-        res.render('single-post', {post, loggedIn: req.session.loggedIn})
+        res.render('edit', {post, loggedIn: req.session.loggedIn})
     }) .catch(err => {
         console.log(err);
         res.status(500).json(err);
@@ -69,14 +71,4 @@ router.get('/post/:id', (req,res) => {
 });
 
 
-router.get('/login', (req, res) => {
-    if (req.session.loggedIn) {
-      res.redirect('/');
-      return;
-    }
-  
-    res.render('login');
-});
-
-
-module.exports = router;
+module.exports = router
