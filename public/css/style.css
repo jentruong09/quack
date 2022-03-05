@@ -24,6 +24,7 @@ body {
     line-height: 1.25;
 }
 
+
 .li-inline {
     display: inline;
 }
@@ -51,22 +52,41 @@ main {
     width: 94%;
 }
 
-.card {
-    background-color: #FFFFFF10;
+.card { /* this changes the styling for each post in the homepage */
+    background-color: #ffffff10;
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
-
+    border: 2px solid #228B22;
+    border-radius: 20px;
+    border-width: 5px;
+    
 }
 
 .card-text a:link{
-    text-decoration: none;
+    background-image: linear-gradient(#228B22, #228B22);
+    background-repeat: no-repeat;
+    background-size: 0% 100%;
+    background-position-x: right;
+    transition: background-size 500ms;
+}
+
+.card-text a:hover {
+    background-size: 100% 100%;
+    background-position-x: left;
 }
 
 .card-text a:visited {
     text-decoration: none;
-    color: black
+    color: rgb(47, 111, 208);
 }
 
-.card-text a:hover {
-    color: #228B22;
+.form-group {
+    color:rgb(47, 111, 208);
 }
+
+.sign-up {
+    color:aliceblue;
+}
+
+
+
