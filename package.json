@@ -1,24 +1,15 @@
 {
-  "name": "project-2-starter-template",
+  "name": "quack",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
     "seeds": "node seeds/index.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/rogermle/project-2-starter-template.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/rogermle/project-2-starter-template/issues"
-  },
-  "homepage": "https://github.com/rogermle/project-2-starter-template#readme",
   "dependencies": {
     "bcrypt": "^5.0.0",
     "connect-session-sequelize": "^7.0.4",
