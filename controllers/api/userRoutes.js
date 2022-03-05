@@ -1,5 +1,60 @@
 const router = require('express').Router();
-const { User } = require('../../models');
+const { User, Post, Comment } = require('../../models');
+
+// to grab all the users without password
+router.get('/', (req, res) => {
+  User.findAll({
+      attributes: {exclude: ['password']}
+  }) .then(dbUserData => {
+    //res.json(dbUserData)
+
+    const users = dbUserData.map((user) => user.get({ plain: true }));
+    //console.log(users)
+    res.render('users', {users, loggedIn: req.session.loggedIn});
+  })
+  .catch(err => {
+    console.log(err);
+    res.status(500).json(err);
+  })
+});
+
+// to grab one user and their post information
+router.get('/:id', (req,res) => {
+  User.findOne({
+      attributes: {exclude: ['password']},
+      where: {
+          id: req.params.id
+      },
+      include: [
+          {
+              model: Post,
+              attributes: ['id', 'post', 'created_at']
+          },
+          {
+              model: Comment,
+              attributes: ['id', 'comment', 'post_id', 'user_id', 'created_at'],
+              include: {
+                  model: Post,
+                  attributes: ['post']
+              }
+          }
+      ]
+  }) .then (dbUserData => {
+      if(!dbUserData) {
+          res.status(404).json({ message: 'No user found with this id!' })
+          return;
+      }
+      //res.json(dbUserData)
+      const user = dbUserData.get({plain: true});
+
+      res.render('single-user', {user, loggedIn: req.session.loggedIn})
+
+  }) .catch(err => {
+      console.log(err);
+      res.status(500).json(err);
+  })
+});
+
 
 //create user
 router.post('/', async (req, res) => {

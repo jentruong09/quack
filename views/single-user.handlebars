@@ -1,0 +1,43 @@
+<div class="user">
+    <div class="user-info">
+        <div class="card w-50">
+            <h3> User's username: {{user.username}} </h3>
+        </div>
+        <div class="posts">
+            <h5> Posts:</h5>
+            {{#each this}}
+                {{#posts}}
+                    <div class="card card-body">
+                        <div class="each-post">
+                            <div class="card-title">
+                                <a href="/post/{{id}}">{{post}}</a>
+                            </div>
+                            <div class="info card-subtitle text-muted">
+                                Posted On: {{format_date created_at}}
+                            </div>
+                        </div>
+                    </div>
+                {{/posts}}
+            {{/each}}
+        </div>
+
+        <div class="comments">
+            <h5> Comments: </h5>
+             {{#each this}}
+                {{#comments}}
+                    <div class="card card-body">
+                        <div class="each-post">
+                            <div class="card-title">
+                                <a href="/post/{{id}}">{{comment}}</a>
+                            </div>
+                            <div class="info card-subtitle text-muted">
+                                Posted On: {{format_date created_at}}
+                            </div>
+                        </div>
+                    </div>
+                {{/comments}}
+            {{/each}}
+        </div>
+    </div>
+</div>
+
