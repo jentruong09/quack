@@ -6,7 +6,7 @@ body {
     background-color: #202020;
     margin: 0;
     padding: 0;
-    font-family: "Luminari","IBM Plex Sans", monospace;
+    font-family: "Didot","IBM Plex Sans", monospace;
     color:black;
     line-height: 1.5;
     font-size: 16px;
@@ -111,6 +111,7 @@ main {
     border-width: 5px;
     margin-bottom: 10px;
     padding-left: 10px;
+    padding: 10px;
 }
 
 .user-card a:link {
@@ -130,9 +131,12 @@ main {
     margin-bottom: 20px;
 }
 
+
 #likes-dislikes{
     display: flex;
 }
+
 #likes-dislikes p{
     margin: 10px;
 }
+
