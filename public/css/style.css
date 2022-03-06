@@ -62,6 +62,10 @@ main {
     margin-bottom: 10px;
 }
 
+.card-text {
+    margin-top: 10px;
+}
+
 .card-text a:link{ /*this is part of the hover effect in the homepage over the posts*/
     background-image: linear-gradient(#228B22, #228B22);
     background-repeat: no-repeat;
@@ -140,3 +144,27 @@ main {
     margin: 10px;
 }
 
+.comments {
+    border: 2px solid #228B22;
+    border-radius: 20px;
+    border-width: 5px;
+    margin-bottom: 10px;
+    padding-left: 10px;
+}
+
+.text {
+    color:rgb(47, 111, 208);
+    margin-bottom: 10px;
+}
+
+.single-comment {
+    padding: 10px;
+}
+
+#submitComment {
+    margin-top: 10px;
+}
+
+#newpostbtn {
+    margin-top: 10px;
+}
