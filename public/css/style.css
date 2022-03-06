@@ -131,19 +131,12 @@ main {
     margin-bottom: 20px;
 }
 
-#comments-container {
-    border: 2px solid #228B22;
-    border-radius: 20px;
-    border-width: 5px;
-    margin-bottom: 10px;
-    padding-left: 10px;
+
+#likes-dislikes{
+    display: flex;
 }
 
-.text {
-    color:rgb(47, 111, 208);
-}
-
-.single-comment {
-    padding: 10px;
+#likes-dislikes p{
+    margin: 10px;
 }
 

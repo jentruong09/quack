@@ -17,6 +17,16 @@ Comment.init(
                 len: [3]
             }
         },
+        likes: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
+            defaultValue: 0
+        },
+        dislikes: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
+            defaultValue: 0
+        },
         post_id: {
             type: DataTypes.INTEGER,
             references: {
