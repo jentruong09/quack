@@ -30,15 +30,13 @@ router.get('/', withAuth, (req, res) => {
     })
 });
 
-
-// issue with this?
 // getting one post with comments
 router.get('/:id', (req,res) => {
     Post.findOne({
         where: {
             id: req.params.id
         },
-        attributes: ['id', 'post', 'created_at'],
+        attributes: ['id', 'post', 'likes', 'dislikes', 'created_at'],
         include: [
             {
                 model: User,
@@ -46,7 +44,7 @@ router.get('/:id', (req,res) => {
             },
             {
             model: Comment,
-            attributes: ['id', 'comment', 'post_id', 'user_id', 'created_at'],
+            attributes: ['id', 'comment', 'likes', 'dislikes', 'post_id', 'user_id', 'created_at'],
             include: {
                 model: User,
                 attributes: ['username']

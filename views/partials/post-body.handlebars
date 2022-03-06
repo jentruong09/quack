@@ -1,12 +1,15 @@
 <div class="container">
     <div class="card">
         <div class="post-body card-body">
+            <div class="info card-subtitle text-muted">
+                <a href="/api/user/{{id}}">{{user.username}}</a> posted on {{format_date created_at}}
+            </div>            
             <div class="card-text">
                 <a href="/post/{{id}}">{{post}}</a>
             </div>
-            <br>
-            <div class="info card-subtitle text-muted">
-                By <a href="/api/user/{{id}}">{{user.username}}</a> Posted on {{format_date created_at}}
+            <div class="container">
+                <p href="/post/{{id}}">{{likes}} Likes</p>
+                <p href="/post/{{id}}">{{dislikes}} Dislikes</p>
             </div>
         </div>
     </div>
