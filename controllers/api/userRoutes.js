@@ -1,8 +1,9 @@
 const router = require('express').Router();
 const { User, Post, Comment } = require('../../models');
+const withAuth = require('../../utils/auth');
 
 // to grab all the users without password
-router.get('/', (req, res) => {
+router.get('/', withAuth, (req, res) => {
   User.findAll({
       attributes: {exclude: ['password']}
   }) .then(dbUserData => {
@@ -19,7 +20,7 @@ router.get('/', (req, res) => {
 });
 
 // to grab one user and their post information
-router.get('/:id', (req,res) => {
+router.get('/:id', withAuth, (req,res) => {
   User.findOne({
       attributes: {exclude: ['password']},
       where: {
