@@ -1,6 +1,4 @@
 
-
-
 var likeFormHandler = async function (event) {
     if (event.target.dataset.button === true) {
         event.preventDefault();
@@ -15,13 +13,13 @@ var likeFormHandler = async function (event) {
 // if like fetch put like
 // if dislike fetch put dislike
 
-    
+    console.log(window.location.origin)
     console.log(event.target.dataset.button)
     if (event.target.dataset.button === 'dislikes') {
         let oldDislikes = parseInt(event.target.textContent);
         let dislikes = oldDislikes + 1;
 
-        await fetch(`api/post/${post_id}`, {
+        await fetch(`${window.location.origin}/api/post/${post_id}`, {
         method: 'PUT',
         body: JSON.stringify({
             dislikes
@@ -37,7 +35,7 @@ var likeFormHandler = async function (event) {
         let oldLikes = parseInt(event.target.textContent);
         let likes = oldLikes + 1;
 
-        await fetch(`api/post/${post_id}`, {
+        await fetch(`${window.location.origin}/api/post/${post_id}`, {
             method: 'PUT',
             body: JSON.stringify({
                 likes
