@@ -1,13 +1,12 @@
-const post_id = document.querySelector('.like-button').id;
-
-
-const likeFormHandler = async function (event) {
+var likeFormHandler = async function (event) {
     event.preventDefault();
 
-    const oldLikes = parseInt(document.querySelector('.likes').textContent);
+    console.log(event.target.class)
+
+    const oldLikes = event.target.textContent;
     let likes = oldLikes + 1;
 
-    await fetch(`api/post/${post_id}`, {
+    await fetch(`api/post/${id}`, {
         method: 'PUT',
         body: JSON.stringify({
             likes
@@ -20,4 +19,4 @@ const likeFormHandler = async function (event) {
 };
 
 
-document.querySelector('.like-button').addEventListener('click', likeFormHandler);
+document.querySelector('post').addEventListener('click', likeFormHandler);
