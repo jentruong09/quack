@@ -1,21 +1,13 @@
-<div class="container" id="comments-container">
-    <div class="comments">
-        {{#each this}}
-        <div class="single-comment">
-            <div class="text">
-                {{comment}}
-            </div>
-            <div class="info card-subtitle text-muted">
-                By {{user.username}} Posted on {{format_date created_at}}
-            </div>
-            <div id="likes-dislikes">
-                <p href="/post/{{id}}" id="likes">{{likes}} &#128154</p>
-                <p href="/post/{{id}}" id="dislikes">{{dislikes}} &#128078</p>
-            </div>
-            <div id="LDC">
-                <button id="LikeBtn"><img src="">Like</button>
-                <button id="DislikeBtn"><img src="">Dislikes</button>
-            </div>
+<div class="container col-8" id="comments-container">
+<div class="comments">
+    <h3>Comments: </h3>
+    {{#each this}}
+    <div class="single-comment">
+        <div class="text">
+            {{comment}}
+        </div>
+        <div class="info card-subtitle text-muted">
+            By {{user.username}} Posted on {{format_date created_at}}
         </div>
         {{/each}}
     </div>

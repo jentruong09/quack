@@ -68,24 +68,6 @@ router.get('/post/:id', (req,res) => {
     })
 });
 
-const updateLike = async (req, res) => {
-    try {
-      const { postId } = req.params;
-      const [ updated ] = await models.Post.update(req.body, {
-        where: { id: postId }
-      });
-      if (updated) {
-        const updatedPost = await models.Post.findOne({ where: { id: postId } });
-        return res.status(200).json({ post: updatedPost });
-      }
-      throw new Error('Post not found');
-    } catch (error) {
-      return res.status(500).send(error.message);
-    }
-  };
-
-  router.put('/post/:postId', updateLike)
-
 router.get('/login', (req, res) => {
     if (req.session.loggedIn) {
       res.redirect('/');
