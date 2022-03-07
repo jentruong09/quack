@@ -1,16 +1,25 @@
-<div class="container">
-    <div class="card">
+
+    
+<div class="container" id="post-container">
+    <div class="card col-8">
+        
         <div class="post-body card-body">
-            <div class="info card-subtitle text-muted">
-                <a href="/api/user/{{id}}">{{user.username}}</a> posted {{format_date created_at}}
-            </div>            
+            
+            <div class="info">
+                <i class="fas fa-at"></i><a href="/api/user/{{id}}" > {{user.username}}</a> 
+            </div>
+             
             <div class="card-text">
-                <a href="/post/{{id}}">{{post}}</a>
+            <a class="post-text" href="/post/{{id}}">{{post}}</a>           
             </div>
             <div id="likes-dislikes">
-                <p href="/post/{{id}}">{{likes}} Likes</p>
-                <p href="/post/{{id}}">{{dislikes}} Dislikes</p>
+                <button type="click" class="like-button btn btn-dark"><i class="fas fa-thumbs-up"></i> <span href="/post/{{id}}" class="likes">{{likes}} Likes</span></button>
+                <button type="click" class="like-button btn btn-dark"><i class="fas fa-thumbs-up"></i> <span href="/post/{{id}}" class="likes">{{dislikes}} Dislikes</span></button> 
             </div>
+            <div class="card-subtitle text-muted">
+                <p class="posted"> Posted {{format_date created_at}}</p>
+            </div>
+           
         </div>
     </div>
 </div>

@@ -1,9 +1,9 @@
-<div class="users">
+<div class=" users">
     <h3>All Quack Members:</h3>
-    <div class="users container">
+    <div class="container users col-3">
         {{#each users as |user|}}
         
-        <div class="user-card">
+        <div class="row user-card">
             <a href="/api/user/{{id}}">{{username}}</a>
         </div>
         {{/each}}
