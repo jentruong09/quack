@@ -3,11 +3,14 @@
     <h3>Comments: </h3>
     {{#each this}}
     <div class="single-comment">
+        <div class="username" >
+            <i class="fas fa-at"></i><a href="/api/user/{{id}}"> {{user.username}}</a> 
+        </div>
         <div class="text">
             {{comment}}
         </div>
         <div class="info card-subtitle text-muted">
-            By {{user.username}} Posted on {{format_date created_at}}
+            Posted {{format_date created_at}}
         </div>
         {{/each}}
     </div>
