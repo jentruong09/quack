@@ -1,6 +1,7 @@
 
-    
+
 <div class="container" id="post-container">
+   
     <div class="card col-8">
         
         <div class="post-body card-body">
@@ -10,16 +11,21 @@
             </div>
              
             <div class="card-text">
-            <a class="post-text" href="/post/{{id}}">{{post}}</a>           
+            <a class="post-text" href="/{{id}}">{{post}}</a>           
             </div>
-            <div id="likes-dislikes">
-                <button type="click" class="like-button btn btn-dark" id="{{id}}"><i class="fas fa-thumbs-up"></i> <span href="/post/{{id}}" class="likes">{{likes}}</span> Likes</button>
-                <button type="click" class="dislike-button btn btn-dark" id="{{id}}"><i class="fas fa-thumbs-up"></i> <span href="/post/{{id}}" class="likes">{{dislikes}} Dislikes</span></button> 
+            
+            <div class="likes-dislikes">
+                <button type="click" data-button="likes" class="like-button btn btn-dark" id="{{id}}"><i class="fas fa-thumbs-up"></i> <span href="/post/{{id}}" class="likes">{{likes}}</span> Likes</button>
+                <button type="click" data-button="dislikes" class="dislike-button btn btn-dark" id="{{id}}"><i class="fas fa-thumbs-up"></i> <span href="/post/{{id}}" class="dislikes">{{dislikes}} </span>Dislikes</button> 
             </div>
+            
             <div class="card-subtitle text-muted">
                 <p class="posted"> Posted {{format_date created_at}}</p>
             </div>
            
         </div>
     </div>
+
 </div>
+
+
