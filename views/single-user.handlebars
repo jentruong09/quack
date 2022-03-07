@@ -1,10 +1,10 @@
-<div class="user">
+<div class="user container col-8">
     <div class="user-info">
-        <div class="card w-50">
+        <div class="w-50">
             <h3> User's username: {{user.username}} </h3>
         </div>
         <div class="posts">
-            <h5> Posts:</h5>
+            <h5> All Posts by User:</h5>
             {{#each this}}
                 {{#posts}}
                     <div class="card card-body">
@@ -22,7 +22,7 @@
         </div>
 
         <div class="comments">
-            <h5> Comments: </h5>
+            <h5> All Comments by User: </h5>
              {{#each this}}
                 {{#comments}}
                     <div class="card card-body">

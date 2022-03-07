@@ -6,7 +6,7 @@ body {
     background-color: #202020;
     margin: 0;
     padding: 0;
-    font-family: "Didot","IBM Plex Sans", monospace;
+    font-family: 'League Spartan', sans-serif;;
     color:black;
     line-height: 1.5;
     font-size: 16px;
@@ -30,13 +30,43 @@ body {
 }
 
 .navbar {
-    width: 100%;
-    position: fixed;
-    background-color:cadetblue;
+    background-color: #228B22;
+
+}
+
+nav a {
+
+    text-align: center;
+}
+
+a:link {
+    text-decoration: none;
+    color: white;
+}
+
+a:visited {
+    text-decoration: none;
+    color: white;
+}
+
+.card-text:link {
+    text-decoration: none;
+}
+
+.card-text:visited {
+    text-decoration: none;
 }
 
 .nav-item {
     margin: 0 40px;
+}
+
+.duck {
+    width: auto;
+    height: 60px;
+    float: left;
+    margin-right: 20px;
+
 }
 
 .nav-item a {
@@ -45,6 +75,8 @@ body {
 
 header {
     margin-top: 50px;
+    margin-bottom: 50px;
+    font-family: 'Mochiy Pop One', sans-serif;
 }
 
 main {
@@ -52,53 +84,71 @@ main {
     width: 94%;
 }
 
+
 .card { /* this changes the styling for each post in the homepage */
     background-color: #ffffff10;
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
-    border: 2px solid #228B22;
+    border: 1px solid #228B22;
     border-radius: 20px;
-    border-width: 5px;
-    margin-bottom: 10px;
+    margin: 20px auto;
+}
+
+a .post-text {
+    color: white;
+}
+
+.fas {
+    color: white;
+}
+
+.far {
+    color: white
 }
 
 .card-text {
+    margin-bottom: 15px;
+}
+
+.info {
+    margin-bottom: 10px;
     margin-top: 10px;
 }
 
-.card-text a:link{ /*this is part of the hover effect in the homepage over the posts*/
+/*this is part of the hover effect in the homepage over the posts*/
+.card-text a:link{ 
     background-image: linear-gradient(#228B22, #228B22);
     background-repeat: no-repeat;
     background-size: 0% 100%;
     background-position-x: right;
     transition: background-size 500ms;
-}
-
-.card-text a:hover { /*part of the hover effect from above*/
-    background-size: 100% 100%;
-    background-position-x: left;
-}
-
-.card-title a:link{ /*this is part of the hover effect in the homepage over the posts*/
-    background-image: linear-gradient(#228B22, #228B22);
-    background-repeat: no-repeat;
-    background-size: 0% 100%;
-    background-position-x: right;
-    transition: background-size 500ms;
-}
-
-.card-title a:hover { /*part of the hover effect from above*/
-    background-size: 100% 100%;
-    background-position-x: left;
-}
-
-.card-text a:visited {
     text-decoration: none;
-    color: rgb(47, 111, 208);
+    color: white;
+} 
+
+/*part of the hover effect from above*/
+.card-text a:hover { 
+    background-size: 100% 100%;
+    background-position-x: left;
+}
+
+/*this is part of the hover effect in the homepage over the posts*/
+.card-title a:link{ 
+    background-image: linear-gradient(#228B22, #228B22);
+    background-repeat: no-repeat;
+    background-size: 0% 100%;
+    background-position-x: right;
+    transition: background-size 500ms;
+}
+
+/*part of the hover effect from above*/
+.card-title a:hover { 
+    background-size: 100% 100%;
+    background-position-x: left;
 }
 
 .form-group {
-    color:rgb(47, 111, 208);
+    color:white;
 }
 
 .sign-up {
@@ -109,13 +159,26 @@ main {
     color: aliceblue;
 }
 
+.posted {
+    margin-top: 10px;
+}
+
+.like-button {
+    margin-right: 10px;
+}
+
+.users {
+    flex-basis: auto;
+    
+}
+
 .user-card {
-    border: 2px solid #228B22;
+    border: 1px solid #228B22;
     border-radius: 20px;
-    border-width: 5px;
     margin-bottom: 10px;
     padding-left: 10px;
     padding: 10px;
+    text-align: center;
 }
 
 .user-card a:link {
@@ -144,16 +207,8 @@ main {
     margin: 10px;
 }
 
-.comments {
-    border: 2px solid #228B22;
-    border-radius: 20px;
-    border-width: 5px;
-    margin-bottom: 10px;
-    padding-left: 10px;
-}
-
 .text {
-    color:rgb(47, 111, 208);
+    color:white;
     margin-bottom: 10px;
 }
 
@@ -168,3 +223,21 @@ main {
 #newpostbtn {
     margin-top: 10px;
 }
+
+#all-posts {
+    margin-top: 35px;
+}
+
+.title-new-post {
+    margin-bottom: 10px;
+}
+
+.post-item {
+    padding-left: 25px;
+}
+
+.edit-link {
+    text-align: right;
+    padding-right: 15px;
+}
+
