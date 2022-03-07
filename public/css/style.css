@@ -24,6 +24,14 @@ body {
     line-height: 1.25;
 }
 
+.username {
+    color: white;
+    margin-bottom: 5px;
+}
+
+.username-tab {
+    margin-bottom: 5px;
+}
 
 .li-inline {
     display: inline;
@@ -207,29 +215,6 @@ a .post-text {
     margin: 10px;
 }
 
-<<<<<<< HEAD
-#LDC{
-    display: flex;
-}
-
-#LDC button {
-    width: 50%;
-    text-align: center;
-    border-top: 2px solid #228B22;
-    border-left: 2px solid #228B22;
-    background-color: #ffffff10;
-}
-
-.comments {
-    border: 2px solid #228B22;
-    border-radius: 20px;
-    border-width: 5px;
-    margin-bottom: 10px;
-    padding-left: 10px;
-}
-
-=======
->>>>>>> main
 .text {
     color:white;
     margin-bottom: 10px;
