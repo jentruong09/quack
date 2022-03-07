@@ -1,7 +1,7 @@
 <div class="user container col-8">
     <div class="user-info">
-        <div class="w-50">
-            <h3> User's username: {{user.username}} </h3>
+        <div class="username-tab">
+            <h3> Username: {{user.username}} </h3>
         </div>
         <div class="posts">
             <h5> All Posts by User:</h5>
@@ -13,7 +13,7 @@
                                 <a href="/post/{{id}}">{{post}}</a>
                             </div>
                             <div class="info card-subtitle text-muted">
-                                Posted On: {{format_date created_at}}
+                                Posted {{format_date created_at}}
                             </div>
                         </div>
                     </div>
@@ -31,7 +31,7 @@
                                 <a href="/post/{{id}}">{{comment}}</a>
                             </div>
                             <div class="info card-subtitle text-muted">
-                                Posted On: {{format_date created_at}}
+                                Posted {{format_date created_at}}
                             </div>
                         </div>
                     </div>
