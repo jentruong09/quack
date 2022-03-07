@@ -56,7 +56,9 @@ router.get('/:id', (req,res) => {
             res.status(404).json({ message: 'No post found with this id!' })
             return;
         }
-        res.json(dbPostData)
+        const post = dbPostData.get({plain: true});
+
+        res.render('single-post', {post, loggedIn: req.session.loggedIn})
 
     }) .catch(err => {
         console.log(err);
@@ -91,12 +93,14 @@ router.post('/', withAuth, async (req, res) => {
 
 router.put('/:id', withAuth, async (req, res) => {
     try {
-      const [affectedRows] = await Post.update(req.body, {
+        console.log(req.body)
+      const affectedRows = await Post.update(req.body, {
         where: {
           id: req.params.id,
         },
+    
       });
-  
+      console.log(affectedRows)
       if (affectedRows > 0) {
         res.status(200).end();
       } else {
