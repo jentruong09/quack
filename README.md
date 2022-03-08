@@ -14,7 +14,7 @@ Quack is an application that allows user's to make an account and interact with 
 ## Installation
 To install necessary dependencies, run the following command:
 - npm i - to install all packages
-- npm run seeds
+- npm run seeds - to seed the database
 
 ## Deployed Link
 [Quack Deployed Link](https://quack-social-media-app.herokuapp.com)
@@ -44,7 +44,9 @@ For more information, please visit: https://opensource.org/licenses/MIT
 
 ## Contributing
 [Vy Nguyen](https://github.com/Vy187)
+</br>
 [Jennifer Truong](https://github.com/jentruong09)
+</br>
 [Colin Cargile](https://github.com/jentruong09)
 
 ## Questions
