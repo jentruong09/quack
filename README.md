@@ -1,9 +1,12 @@
 # quack 
 # Description
-Quack is a 
+Quack is an application that allows user's to make an account and interact with other users.  Through this interaction they can make a post or comment on another's.  If logged out the user can only see the posts but not the comments that belong to it.  The post is able to be liked or disliked at an umlimited amount of times just to allow the user have fun with it.  It is anonymous to would likes or dislikes the post so it keeps everything private for the user.
+
 # Table of Contents
 * [Installation](#Installation)
-* [Demostration](#Demostration)
+* [Deployed Link](#Deployed)
+* [Preview](#Preview)
+* [Wireframe](#Wireframe)
 * [Contributing](#Contribution)
 * [Questions](#Questions)
 * [Licence](#Licence)
@@ -11,8 +14,16 @@ Quack is a
 # Installation
 To install necessary dependencies, run the following command:
 - npm i
+- npm seeds
 
-# Demostration
+# Deployed Link
+[Quack](https://quack-project.herokuapp.com)
+
+# Preview
+![Render](./public/images/duck.png)
+
+# Wireframe
+![Render](./public/images/wireframe.png)
 
 # Licence
 ![Github Licence](http://img.shields.io/badge/license-MIT-blue.svg)
