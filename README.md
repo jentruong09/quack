@@ -20,7 +20,7 @@ To install necessary dependencies, run the following command:
 [Quack](https://quack-project.herokuapp.com)
 
 # Preview
-![Render](./public/images/duck.png)
+![Render](./public/images/deployed.png)
 
 # Wireframe
 ![Render](./public/images/wireframe.png)
