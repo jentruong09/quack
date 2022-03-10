@@ -7,6 +7,7 @@ Quack is an application that allows user's to make an account and interact with 
 * [Deployed Link](#Deployed)
 * [Preview](#Preview)
 * [Wireframe](#Wireframe)
+* [Credits](#credits)
 * [Contributing](#Contribution)
 * [Questions](#Questions)
 * [Licence](#Licence)
@@ -28,6 +29,34 @@ To install necessary dependencies, run the following command:
 
 ## Wireframe
 ![Render](./public/images/wireframe.png)
+
+## Credits
+Technologies Used in this project:
+  
+[npm bcrypt](https://www.npmjs.com/package/bcrypt)
+
+[npm connect-session-sequelize](https://www.npmjs.com/package/connect-session-sequelize)
+
+[npm express](https://www.npmjs.com/package/express)
+
+[npm express-handlebars](https://www.npmjs.com/package/express-handlebars)
+
+[npm express-session](https://www.npmjs.com/package/express-session)
+
+[npm handlebars](https://www.npmjs.com/package/handlebars)
+
+[npm dotenv](https://www.npmjs.com/package/dotenv)
+
+[npm sequelize](https://www.npmjs.com/package/sequelize)
+
+[npm mysql2](https://www.npmjs.com/package/mysql2)
+
+[npm date-fns](https://www.npmjs.com/package/date-fns)
+
+[Bootstrap](https://getbootstrap.com/)
+
+[Font Awesome](https://fontawesome.com)
+
 
 ## Licence
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
