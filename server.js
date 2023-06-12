@@ -10,7 +10,8 @@ const sequelize = require('./config/connection');
 const helpers = require('./utils/helpers');
 
 const app = express();
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 5000;
+//3001
 
 //Set up sessions
 const sess = {
